@@ -8,9 +8,6 @@ RUN yum --setopt=tsflags=nodocs -y install \
 # Remove pre-installed database
 RUN rm -rf /var/lib/mysql/*
 
-# Remove syslog configuration
-RUN rm /etc/mysql/conf.d/mysqld_safe_syslog.cnf
-
 # Add MySQL configuration
 ADD my.cnf /etc/mysql/conf.d/my.cnf
 ADD mysqld_charset.cnf /etc/mysql/conf.d/mysqld_charset.cnf
