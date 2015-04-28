@@ -21,12 +21,6 @@ RUN chmod 755 /*.sh
 ENV MYSQL_USER admin
 ENV MYSQL_PASS password
 
-# Replication ENV
-ENV REPLICATION_MASTER **False**
-ENV REPLICATION_SLAVE **False**
-ENV REPLICATION_USER replica
-ENV REPLICATION_PASS replica
-
 # Add VOLUMEs to allow backup of config and databases
 VOLUME  ["/etc/mysql", "/var/lib/mysql"]
 
