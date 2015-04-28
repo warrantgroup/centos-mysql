@@ -48,7 +48,7 @@ This will mount the local folder `/path/host` inside the docker in `/var/lib/mys
 
 Remember that this will mean that your host must have `/path/host` available when you run your docker image
 
-After this you can start your MySQL image, but this time using `/path/in/host` as the database folder:
+After this you can start your MySQL image, but this time using `/path/host` as the database folder:
 
         docker run -d -p 3306:3306 -v /path/host:/var/lib/mysql warrantgroup/mysql
 
