@@ -3,7 +3,8 @@ MAINTAINER Andy Roberts <andy.roberts@warrant-group.com>
 
 # Install packages
 RUN yum --setopt=tsflags=nodocs -y install \
-	http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
+	http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm \
+	pwgen
 
 # Remove pre-installed database
 RUN rm -rf /var/lib/mysql/*
@@ -26,3 +27,4 @@ VOLUME  ["/etc/mysql", "/var/lib/mysql"]
 
 EXPOSE 3306
 
+CMD ["/run.sh"]
