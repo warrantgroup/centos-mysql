@@ -1,4 +1,4 @@
-FROM warrntgroup/centos:7
+FROM warrantgroup/centos:7
 MAINTAINER Andy Roberts <andy.roberts@warrant-group.com>
 
 # Install packages
