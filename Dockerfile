@@ -25,6 +25,6 @@ ENV MYSQL_PASS **Random**
 # Add VOLUMEs to allow backup of config and databases
 VOLUME  ["/etc/mysql", "/var/lib/mysql"]
 
-EXPOSE 3306
+EXPOSE 22, 3306
 
 CMD ["/run.sh"]
